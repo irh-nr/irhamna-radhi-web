@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { CodeBackground } from "../ui/code-background";
+import { AspectRatio } from "../ui/aspect-ratio";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,16 +69,18 @@ export default function Hero() {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              <div className="relative w-96 h-96">
+              <div className="w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur-3xl"></div>
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border shadow-2xl">
-                  <Image
-                    src="/irhamna-pic2.png"
-                    alt="Irhamna Radhi - Full-Stack Web Developer"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
+                  <AspectRatio ratio={1 / 1}>
+                    <Image
+                      src="/irhamna-pic2.png"
+                      alt="Irhamna Radhi - Full-Stack Web Developer"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </AspectRatio>
                 </div>
               </div>
             </div>
