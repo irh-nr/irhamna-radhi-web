@@ -1,4 +1,4 @@
-import { GlowEffect } from "../../../components/motion-primitives/glow-effect";
+import { GlowEffect } from "../motion-primitives/glow-effect";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
