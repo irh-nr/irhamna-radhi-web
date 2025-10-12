@@ -4,6 +4,7 @@ import { navItems } from "@/lib/navItems";
 import Link from "next/link";
 import NavMobile from "../ui/nav-mobile";
 import ContactButton from "../ui/contact-button";
+import { motion } from "motion/react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,13 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <ContactButton />
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ duration: 0.5, ease: "easeIn" }}
+            >
+              <ContactButton />
+            </motion.div>
           </div>
           <NavMobile />
         </div>
