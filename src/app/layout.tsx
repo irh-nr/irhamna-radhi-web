@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Irhamna Radhi — Full-Stack Web Developer",
   description:
     "Crafting high-performance, accessible, and SEO-optimized web experiences.",
+  verification: {
+    google: "gxtEjNRHWBi6iN2h9170nH5-dmF8Ky_6ycrNmAXYZpE",
+  },
 };
 
 export default function RootLayout({
