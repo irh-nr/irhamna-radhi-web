@@ -71,7 +71,7 @@ export default function Hero() {
             >
               <div className="w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur-3xl"></div>
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border shadow-2xl">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                   <AspectRatio ratio={1 / 1}>
                     <Image
                       src="/irhamna-pic2.png"
