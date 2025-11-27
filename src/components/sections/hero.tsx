@@ -39,9 +39,7 @@ export default function Hero() {
                 <h1 className="heading">Irhamna Radhi</h1>
                 <p className="subheading1">
                   Building responsive, SEO-optimized, and accessible web
-                  experiences with{" "}
-                  <span className="text-foreground font-semibold">Next.js</span>
-                  .
+                  experiences.
                 </p>
               </div>
 
