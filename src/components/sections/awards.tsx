@@ -44,17 +44,27 @@ const achievements = [
 
 const education = [
   {
+    year: "2020 - 2023",
+    title: "Junior High School Diploma",
+    institution: "SMP Negeri 151 Jakarta",
+    description:
+      "Built a strong foundation in mathematics and science, with an interest in biophysics.",
+    logo: "/Logo_SMPN151.png", // Add your school logo URL here
+  },
+  {
     year: "2023 - 2026",
-    title: "High School Diploma",
+    title: "Senior High School Diploma",
     institution: "SMA Negeri 75 Jakarta",
-    description: "Focus on Technology, Physics, and Economy/Accounting",
+    description:
+      "Focused on technology, physics, and economics/accounting while developing analytical and problem-solving skills.",
     logo: "/Logo_SMAN75.png", // Add your school logo URL here
   },
   {
     year: "2026 - Present",
-    title: "Bachelor Degree",
+    title: "Bachelor's Degree",
     institution: "IPB University",
-    description: "Majoring in Artificial Intelligence",
+    description:
+      "Majoring in Artificial Intelligence, with a focus on machine learning, programming, and computational problem-solving.",
     logo: "/Logo_IPB.png", // Add your university logo URL here
   },
 ];

@@ -7,7 +7,7 @@ const skillCategories = [
   {
     title: "Languages",
     icon: Code2,
-    skills: ["TypeScript", "JavaScript", "C#"],
+    skills: ["TypeScript", "JavaScript", "Python", "C#"],
   },
   {
     title: "Frontend",
@@ -17,7 +17,7 @@ const skillCategories = [
   {
     title: "Backend",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "Prisma ORM"],
+    skills: ["Supabase", "PostgreSQL", "MySQL", "Prisma ORM"],
   },
   {
     title: "Tools",
