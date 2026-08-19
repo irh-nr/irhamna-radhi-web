@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Award, GraduationCap } from "lucide-react";
+import Image from "next/image";
+import { Award } from "lucide-react";
 
 const achievements = [
   {
@@ -43,9 +44,18 @@ const achievements = [
 
 const education = [
   {
-    year: "Expected 2026",
+    year: "2023 - 2026",
     title: "High School Diploma",
+    institution: "SMA Negeri 75 Jakarta",
     description: "Focus on Technology, Physics, and Economy/Accounting",
+    logo: "/Logo_SMAN75.png", // Add your school logo URL here
+  },
+  {
+    year: "2026 - Present",
+    title: "Bachelor Degree",
+    institution: "IPB University",
+    description: "Majoring in Artificial Intelligence",
+    logo: "/Logo_IPB.png", // Add your university logo URL here
   },
 ];
 
@@ -60,7 +70,7 @@ export function Awards() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -87,21 +97,34 @@ export function Awards() {
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Education Card */}
           <div className="bg-background rounded-2xl p-8 border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-            {education.map((education, index) => (
-              <div className="flex items-start gap-4" key={index}>
-                <div className="p-3 bg-primary/10 rounded-xl">
-                  <GraduationCap className="w-6 h-6 text-primary" />
+            {education.map((edu, index) => (
+              <div className="flex items-center gap-6 pb-10" key={index}>
+                <div className="w-32 h-32  rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden relative">
+                  {edu.logo ? (
+                    <Image
+                      src={edu.logo}
+                      alt={edu.institution}
+                      width={84}
+                      height={84}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="text-xs text-primary/50 text-center px-2">
+                      {edu.institution}
+                    </div>
+                  )}
                 </div>
                 <div className="flex-1">
                   <div className="text-sm text-primary font-medium mb-2">
-                    {education.year}
+                    {edu.year}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {education.title}
+                  <h3 className="text-xl font-bold text-foreground mb-1">
+                    {edu.title}
                   </h3>
-                  <p className="text-muted-foreground">
-                    {education.description}
+                  <p className="text-sm text-primary/70 font-medium mb-2">
+                    {edu.institution}
                   </p>
+                  <p className="text-muted-foreground">{edu.description}</p>
                 </div>
               </div>
             ))}

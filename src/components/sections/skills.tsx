@@ -7,17 +7,17 @@ const skillCategories = [
   {
     title: "Languages",
     icon: Code2,
-    skills: ["TypeScript", "JavaScript", "C#"],
+    skills: ["TypeScript", "JavaScript", "Python", "C#"],
   },
   {
     title: "Frontend",
     icon: AppWindow,
-    skills: ["Next.js", "Tailwind CSS", "ShadCN"],
+    skills: ["Next.js", "Laravel", "Tailwind CSS", "ShadCN"],
   },
   {
     title: "Backend",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "Prisma ORM"],
+    skills: ["Supabase", "PostgreSQL", "MySQL", "Prisma ORM"],
   },
   {
     title: "Tools",
@@ -42,7 +42,7 @@ export function Skills() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
