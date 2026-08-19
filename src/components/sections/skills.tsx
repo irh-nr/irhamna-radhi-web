@@ -7,27 +7,32 @@ const skillCategories = [
   {
     title: "Languages",
     icon: Code2,
-    skills: ["TypeScript", "JavaScript", "Python", "C#"],
+    skills: ["TypeScript", "JavaScript", "C#"],
   },
   {
     title: "Frontend",
     icon: AppWindow,
-    skills: ["Next.js", "Laravel", "Tailwind CSS", "ShadCN"],
+    skills: ["Next.js", "Tailwind CSS", "ShadCN"],
   },
   {
     title: "Backend",
     icon: Database,
-    skills: ["Supabase", "PostgreSQL", "MySQL", "Prisma ORM"],
+    skills: ["PostgreSQL", "MySQL", "Prisma ORM"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    skills: ["Git", "GitHub", "Vercel"],
+    skills: ["Git", "GitHub", "GitBash", "Visual Studio", "Visual Studio Code"],
   },
   {
     title: "Soft Skills",
     icon: Users,
-    skills: ["Communicative", "Analytical Thinking", "Teamwork"],
+    skills: [
+      "Communicative",
+      "Analytical Thinking",
+      "Teamwork",
+      "Problem Solving",
+    ],
   },
 ];
 
