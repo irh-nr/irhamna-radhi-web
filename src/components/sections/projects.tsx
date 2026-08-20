@@ -6,8 +6,17 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "GOVOKASi Company Website",
+    period: "10/2025 – 05/2026",
+    description:
+      "Corporate website built end-to-end with a custom CMS, covering full-stack development, UI/UX design, content management, and deployment. Developed a scalable platform to showcase GOVOKASi's talent solutions, corporate services, programs, and organizational information.",
+    image: "/pageshots_govokasi.png",
+    tags: ["Next.js", "TypeScript", "CMS", "Tailwind CSS", "Supabase"],
+    liveUrl: "https://govokasi.com/",
+  },
+  {
     title: "Willy Octavianus Personal Web",
-    period: "09/2025 – Present",
+    period: "09/2025 – 10/2025",
     description:
       "Personal branding site built with Next.js and TypeScript. Managed end-to-end including full-stack development, content writing, UI/UX design, and deployment.",
     image: "/pageshots_willy.png",
@@ -19,9 +28,9 @@ const projects = [
     title: "Quick Recipe",
     period: "06/2025 – 07/2025",
     description:
-      "Full-stack recipe app using Next.js + Supabase + PostgreSQL. Features SSR, ISR, lazy-loaded images, SEO optimization, and accessibility enhancements.",
+      "Full-stack recipe app using Next.js. Features SSR, ISR, lazy-loaded images, SEO optimization, and accessibility enhancements.",
     image: "/pageshots_quickrecipe.png",
-    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "https://quick-recipe-app.vercel.app/",
     githubUrl: "https://github.com/irh-nr/quick-recipe",
   },
@@ -38,7 +47,7 @@ export function Projects() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -107,15 +116,17 @@ export function Projects() {
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="inline-flex items-center gap-2 px-4 py-2 border border-border text-foreground rounded-lg hover:bg-secondary transition-all text-sm font-medium"
-                    >
-                      <Github className="w-4 h-4" />
-                      GitHub
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-border text-foreground rounded-lg hover:bg-secondary transition-all text-sm font-medium"
+                      >
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

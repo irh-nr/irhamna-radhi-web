@@ -108,8 +108,11 @@ export function Awards() {
           {/* Education Card */}
           <div className="bg-background rounded-2xl p-8 border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
             {education.map((edu, index) => (
-              <div className="flex items-center gap-6 pb-10" key={index}>
-                <div className="w-32 h-32  rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden relative">
+              <div
+                className="flex items-center text-center gap-6 pb-12 flex-col md:text-start md:flex-row md:items-start"
+                key={index}
+              >
+                <div className="w-20 h-20  rounded-xl flex justify-center flex-shrink-0 overflow-hidden relative">
                   {edu.logo ? (
                     <Image
                       src={edu.logo}
